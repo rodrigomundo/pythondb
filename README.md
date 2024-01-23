@@ -1,1 +1,1 @@
-Esta cosa hace una cosa.
+Esta cosa sigue haciendo una cosa.
