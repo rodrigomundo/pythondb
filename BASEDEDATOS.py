@@ -3,6 +3,7 @@
 
 # In[1]:
 
+#Oliwis
 
 import pyodbc
 SERVER = 'LAPTOP-0DFDCEIG'
