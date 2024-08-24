@@ -50,7 +50,19 @@ respuesta2 = lainstancia.putapi(chicho, {
 print (respuesta2)
 
 
-# In[ ]:
+# In[ ]: Esto hace un select y llama un stored procedure que hace un insert
+SERVER = 'LAPTOP-0DFDCEIG'
+DATABASE = 'Bandas_Guadalajara'
+USERNAME = 'rod'
+PASSWORD = 'Borges2017'
+basesilla = clasesilla(SERVER, DATABASE, USERNAME, PASSWORD)
+resultado = basesilla.micursorcito ('SELECT TOP (1000) [id_banda],[nombre],[Fecha_fundacion],[Lugar_fundacion],[id_genero],[id_subgenero]FROM [Bandas_Guadalajara].[dbo].[BANDAS]')
+print (resultado[0][1])
+
+valores = ('Retro bitter', '20211011', 'Zapopan', 0, 1, None)
+
+resultado2 = basesilla.insertar ("EXEC [dbo].[sp_CrearBanda] ?, ?, ?, ?, ?, ?", valores)
+print (resultado2)
 
 
 
